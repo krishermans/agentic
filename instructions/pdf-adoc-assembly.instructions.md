@@ -1,15 +1,17 @@
 ---
-description: "Use when creating or updating Course/Modules/*/pdf.adoc files that aggregate module chapters into one PDF source."
-applyTo: "Course/Modules/*/pdf.adoc"
+description: "Use when creating or updating Course/<lang>/Modules/*/pdf.adoc files that aggregate module chapters into one PDF source."
+applyTo: "Course/*/Modules/*/pdf.adoc"
 ---
 
 # PDF Assembly For Module Chapters
 
 Use these rules when building a `pdf.adoc` file inside a module folder.
 
+Each language root (`Course/nl/`, `Course/en/`) has its own `pdf.adoc` per module — build them independently, only combining chapter files from the same language root.
+
 ## Doel
 
-A module `pdf.adoc` combines all chapter files from the same module in the correct order.
+A module `pdf.adoc` combines all chapter files from the same module and the same language root, in the correct order.
 
 ## Required File Selection
 

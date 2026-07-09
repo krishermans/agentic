@@ -1,6 +1,6 @@
 ---
 name: generate-questions
-description: Use when creating or updating module question imports for Blackboard from Course/Modules/* content and requiring auto-gradable tab-delimited questions.tsv files.
+description: Use when creating or updating module question imports for Blackboard from Course/<lang>/Modules/* content and requiring auto-gradable tab-delimited questions.tsv files.
 ---
 
 # generate-questions
@@ -9,14 +9,16 @@ Create or update Blackboard question import files from module content.
 
 ## Scope
 
-Use this skill for content under Course/Modules/* and generate Course/Modules/*/questions.tsv.
+Use this skill for content under `Course/nl/Modules/*` and `Course/en/Modules/*`, and generate `Course/<lang>/Modules/*/questions.tsv` — one question bank per module **per language**.
 
-Read the module's existing chapter content first, especially:
+Determine the language from the path (`Course/nl/...` or `Course/en/...`) before generating. If the user asks for a question bank without specifying, ask which language(s) to generate, or default to generating both if question banks already exist for the module in both languages.
 
-- Course/Modules/*/00-objectives.adoc
-- Course/Modules/*/*.adoc chapter files
+Read the module's existing chapter content first, in the target language, especially:
 
-Derive the questions from the actual module content.
+- `Course/<lang>/Modules/*/00-objectives.adoc`
+- `Course/<lang>/Modules/*/*.adoc` chapter files
+
+Derive the questions from the actual module content in that language. The `nl` and `en` question banks are independent files — they don't need to be literal translations of each other, but should test the same underlying facts where the two language versions of the chapter cover the same content.
 
 ## Required Output File
 
@@ -87,8 +89,8 @@ Open questions are hard to auto-grade reliably in Blackboard. Keep this skill re
 
 ## Normalization Rules
 
-- Keep question and answer text in Dutch.
-- Keep Blackboard control words in English (correct, incorrect, true, false).
+- Keep question and answer text in the module's target language (Dutch for `Course/nl/...`, English for `Course/en/...`).
+- Keep Blackboard control words in English regardless of language (correct, incorrect, true, false).
 - Preserve the logical order from the module content when choosing answer options.
 - Ensure exactly one correct option for MC rows unless the source explicitly requires multiple answers.
 - Escape or rewrite text that contains tabs so each field stays valid.

@@ -27,6 +27,7 @@ apm install pxl-grpro/agentic/instructions/pdf-adoc-assembly.instructions.md
 
 ```
 apm install pxl-grpro/agentic/skills/new-chapter
+apm install pxl-grpro/agentic/skills/translate-chapter
 apm install pxl-grpro/agentic/skills/validate-chapter
 apm install pxl-grpro/agentic/skills/generate-objectives
 apm install pxl-grpro/agentic/skills/generate-questions
@@ -49,11 +50,18 @@ apm update
 > [!TIP]
 > Je kan copilot vragen om dit bestand aan te vullen op basis van een reeds bestaande cursus 😉
 
+> [!NOTE]
+> Deze template gaat uit van een cursus in twee talen (Nederlands en Engels), onder `Course/nl/` en `Course/en/`.
+> Module- en hoofdstukstructuur wordt één keer bijgehouden; enkel de statuskolom is per taal apart.
+
 ```markdown
 # Content Plan
 
 This file is the single source of truth for the module and chapter structure of this course.
 Agents (Claude, GitHub Copilot) MUST consult this file before creating or numbering any module or chapter.
+
+The course is written in two languages, Dutch (`nl`) and English (`en`), under `Course/nl/` and `Course/en/`.
+Module and chapter structure (folders, numbering, filenames) is shared across both languages — this table lists it once, with a separate status column per language.
 
 ## Course Overview
 
@@ -71,8 +79,8 @@ Agents (Claude, GitHub Copilot) MUST consult this file before creating or number
 
 ## Modules and Chapters
 
-| #  | Folder | Module title | Chapter file | Chapter title | Status |
-|----|--------|--------------|--------------|---------------|--------|
+| #  | Folder | Module title | Chapter file | Chapter title | Status (NL) | Status (EN) |
+|----|--------|--------------|--------------|---------------|--------------|--------------|
 
 ```
 
@@ -85,6 +93,14 @@ Je kan nu een eenvoudige prompt schrijven om een nieuw hoofdstuk aan te maken:
 ```text
 create a new chapter in module 1 called "introductie". the chapter must contain a brief summary of the course with a detailed planning.
 ```
+
+Standaard wordt het hoofdstuk in beide talen aangemaakt. Wil je maar één taal, zeg dat er expliciet bij:
+
+```text
+create the English version of the chapter about loops in module 2 first, I'll translate it to Dutch later.
+```
+
+Gebruik `/translate-chapter` om nadien de andere taalversie te genereren op basis van een bestaand hoofdstuk.
 
 ### From COURSE.md
 
