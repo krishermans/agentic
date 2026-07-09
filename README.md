@@ -19,18 +19,18 @@ apm init
 #### Instructions
 
 ```
-apm install pxl-grpro/agentic/instructions/course-authoring.instructions.md
-apm install pxl-grpro/agentic/instructions/pdf-adoc-assembly.instructions.md
+apm install krishermans/agentic/instructions/course-authoring.instructions.md
+apm install krishermans/agentic/instructions/pdf-adoc-assembly.instructions.md
 ```
 
 #### Skills
 
 ```
-apm install pxl-grpro/agentic/skills/new-chapter
-apm install pxl-grpro/agentic/skills/translate-chapter
-apm install pxl-grpro/agentic/skills/validate-chapter
-apm install pxl-grpro/agentic/skills/generate-objectives
-apm install pxl-grpro/agentic/skills/generate-questions
+apm install krishermans/agentic/skills/new-chapter
+apm install krishermans/agentic/skills/translate-chapter
+apm install krishermans/agentic/skills/validate-chapter
+apm install krishermans/agentic/skills/generate-objectives
+apm install krishermans/agentic/skills/generate-questions
 ```
 
 ### Update
