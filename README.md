@@ -1,6 +1,6 @@
 # Agentic courses
 
-Skills, agents & instructions for agentic courses with GitHub copilit (CLI)
+Skills, agents & instructions for agentic courses
 
 ## Getting started
 
