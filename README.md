@@ -6,15 +6,15 @@ Skills, agents & instructions for agentic courses
 
 ### APM - Agent Package Manager
 
-- installeer [https://microsoft.github.io/apm/](https://microsoft.github.io/apm/)
+- install [https://microsoft.github.io/apm/](https://microsoft.github.io/apm/)
 
-### APM project aanmaken
+### Create an APM project
 
 ```
 apm init
 ```
 
-### Installeer
+### Install
 
 #### Instructions
 
@@ -35,7 +35,7 @@ apm install krishermans/agentic/skills/generate-questions
 
 ### Update
 
-Updates van skills, agents & instructies kunnen achteraf heel eenvoudig geïnstalleerd worden:
+Updates to skills, agents & instructions can easily be installed afterwards:
 
 ```
 apm update
@@ -43,16 +43,16 @@ apm update
 
 ### COURSE.md
 
-- Maak een `COURSE.md` bestand aan in de root-directory van je project
-- Gebruik onderstaande template als beginpunt
-- Vul de naam en omschrijving van je cursus in
+- Create a `COURSE.md` file in the root directory of your project
+- Use the template below as a starting point
+- Fill in the name and description of your course
 
 > [!TIP]
-> Je kan copilot vragen om dit bestand aan te vullen op basis van een reeds bestaande cursus 😉
+> You can ask Claude to fill in this file based on an existing course 😉
 
 > [!NOTE]
-> Deze template gaat uit van een cursus in twee talen (Nederlands en Engels), onder `Course/nl/` en `Course/en/`.
-> Module- en hoofdstukstructuur wordt één keer bijgehouden; enkel de statuskolom is per taal apart.
+> This template assumes a course in two languages (Dutch and English), under `Course/nl/` and `Course/en/`.
+> Module and chapter structure is tracked once; only the status column is separate per language.
 
 ```markdown
 # Content Plan
@@ -88,24 +88,24 @@ Module and chapter structure (folders, numbering, filenames) is shared across bo
 
 ### From scratch
 
-Je kan nu een eenvoudige prompt schrijven om een nieuw hoofdstuk aan te maken:
+You can now write a simple prompt to create a new chapter:
 
 ```text
-create a new chapter in module 1 called "introductie". the chapter must contain a brief summary of the course with a detailed planning.
+create a new chapter in module 1 called "introduction". the chapter must contain a brief summary of the course with a detailed planning.
 ```
 
-Standaard wordt het hoofdstuk in beide talen aangemaakt. Wil je maar één taal, zeg dat er expliciet bij:
+By default, the chapter is created in both languages. If you only want one language, say so explicitly:
 
 ```text
 create the English version of the chapter about loops in module 2 first, I'll translate it to Dutch later.
 ```
 
-Gebruik `/translate-chapter` om nadien de andere taalversie te genereren op basis van een bestaand hoofdstuk.
+Use `/translate-chapter` afterwards to generate the other language version based on an existing chapter.
 
 ### From COURSE.md
 
-Je kan ook zelf inhoud toevoegen aan het `COURSE.md`-bestand en daarna vragen aan copilot om deze hoofdstukken te genereren.
+You can also add content to the `COURSE.md` file yourself and then ask Claude to generate these chapters.
 
 ## .gitignore
 
-Gebruik het `.gitignore`-bestand om overbodige bestanden uit te sluiten
+Use the `.gitignore` file to exclude unnecessary files
