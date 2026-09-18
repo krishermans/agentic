@@ -81,13 +81,15 @@ Chapter content language depends on the language root the file lives in:
 
 Both language versions of a chapter MUST:
 
-- keep the tone professional but approachable
+- keep the tone educational, professional but approachable
 - start with a short orientation sentence, then build the explanation step by step
 - prefer short, readable paragraphs with concrete examples
 - keep each chapter short and focused: introduction → explanation → example → practical usage
 - use AsciiDoc elements when useful: bullet lists, numbered lists, tables, NOTE blocks, CAUTION blocks
 - keep terminology consistent across chapters and align with the existing course progression
 - cover the same sections, examples, and code blocks as the counterpart chapter in the other language root — the two versions MUST stay structurally in sync, even though the prose is independently written per language
+- Avoid AI artifacts: curly quotes (' " "), emdashes (—), and filler phrases ("In this section we will discuss...", "Why this is important:").
+- Avoid overuse of bold-bullet-point lists in the pattern "Term: explanation".
 
 Use `/translate-chapter` to create or resync the counterpart of a chapter in the other language.
 
