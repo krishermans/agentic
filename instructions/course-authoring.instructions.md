@@ -168,6 +168,28 @@ Agents MUST NOT write external links without the `^` modifier.
 - use kebab-case file names
 - `:imagesdir: images` is active in every chapter header
 
+## Diagrams
+
+Mermaid is the preferred format for diagrams in chapter content (flowcharts, sequence diagrams, class diagrams, etc.).
+
+AsciiDoc mermaid block pattern:
+
+```adoc
+[mermaid]
+....
+graph TD
+    A[Request] --> B[Controller]
+    B --> C[Service]
+    C --> D[Database]
+....
+```
+
+- keep diagrams small and focused on the concept being explained; do not diagram trivial flows
+- diagram labels and text follow the same language rule as the surrounding chapter (Dutch in `nl`, English in `en`)
+- when both language versions of a chapter need the same diagram, keep the structure identical and translate only the labels
+
+Agents MUST NOT add, generate, or modify a diagram on their own initiative, under any circumstance. This applies whether a diagram is missing, outdated, or could simply improve a section. Whenever a diagram seems useful, stop and ask the user whether to create or update it together before writing any mermaid code. Only add or change a diagram after the user has agreed on its content in that conversation.
+
 ## Course Content Plan
 
 The full list of modules and chapters for this course is maintained in `COURSE.md` at the repository root.
