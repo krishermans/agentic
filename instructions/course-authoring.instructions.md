@@ -79,6 +79,8 @@ Chapter content language depends on the language root the file lives in:
 - files under `Course/nl/...` MUST be written in Dutch, using the `je` form consistently
 - files under `Course/en/...` MUST be written in English, addressing the reader directly ("you")
 
+Before drafting or rewriting prose in a chapter, read the voice reference for that language root — `voice/voice-nl.md` for `nl`, `voice/voice-en.md` for `en` — and match its sentence rhythm and narrative traits (bullet preview before the intro, "we"/direct-address alternation, forward-looking close). For `en`, the reference has no Dutch source to quote from and explicitly requires writing natively in English rather than translating — follow that rule strictly.
+
 Both language versions of a chapter MUST:
 
 - keep the tone educational, professional but approachable
@@ -99,6 +101,7 @@ When obvious tips or pitfalls exist, make them visible with an admonition block:
 
 - use `[TIP]` for best practices — things a student should do to work effectively
 - use `[WARNING]` for bad practices — things a student should avoid because they cause problems
+- use `[NOTE]` for an important caveat or clarification that isn't a best/bad practice (e.g. a method's return type or a language rule the reader must keep in mind) — never write this inline as "Let op: ..." / "Note: ..." prose, use the block instead
 
 AsciiDoc admonition block pattern:
 
@@ -112,7 +115,14 @@ Tip text here.
 ====
 Warning text here.
 ====
+
+[NOTE]
+====
+Note text here.
+====
 ```
+
+Don't overuse admonitions: no more than 3 to 5 per chapter. Reserve them for points that genuinely deserve to stand out; anything more frequent than that belongs in plain paragraph text.
 
 Agents MUST NOT bury best-practice or bad-practice advice in plain paragraph text when an admonition block would make it stand out.
 

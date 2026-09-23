@@ -43,7 +43,10 @@ Create a new AsciiDoc chapter file that follows the course structure and writing
    == <Module Name>
    [discrete]
    === <Chapter Title>
-   In dit hoofdstuk leer je ...
+   In dit hoofdstuk leer je:
+
+   * <puntsgewijs, concreet leerdoel>
+   * <puntsgewijs, concreet leerdoel>
 
    '''
 
@@ -72,7 +75,10 @@ Create a new AsciiDoc chapter file that follows the course structure and writing
    == <Module Name>
    [discrete]
    === <Chapter Title>
-   In this chapter, you will learn ...
+   In this chapter, you will learn:
+
+   * how to <concrete learning goal, bullet form>
+   * how to <concrete learning goal, bullet form>
 
    '''
 
@@ -84,14 +90,14 @@ Create a new AsciiDoc chapter file that follows the course structure and writing
    `<Program Name>` is the official program name in that language (e.g. the Dutch degree title and its official English equivalent). Ask the user once if it isn't already established elsewhere in the course, and reuse the same value across chapters within a language.
 
    Writing rules:
-   - Complete the opening sentence (`In dit hoofdstuk leer je ...` / `In this chapter, you will learn ...`) with a concrete statement about what the reader will learn
+   - Fill the bullet list under `In dit hoofdstuk leer je:` / `In this chapter, you will learn:` with concrete learning goals — do not add a separate orientation sentence after the list, it would just repeat the bullets. In English, each bullet must read as a grammatical continuation of "you will learn" (start with "how to ...", not a bare verb)
    - Body text is written in the language of the file: Dutch (`je`-form) under `nl`, English (direct "you") under `en` — professional but approachable in both
    - Structure: introduction → explanation → example → practical usage — identical structure in both languages
    - Code blocks use `[source,<lang>]` (e.g. `csharp`, `json`, `bash`) with English variable names and English comments in **both** language versions — code never changes between `nl` and `en`
    - External links must include the `^` modifier: `https://example.com[https://example.com^]`
    - Unless this is a labo/lab chapter (title contains "Labo" or "Lab") or a module objectives/overview file (`00-`), end the file with a summary section followed by a short bullet list summarising the key takeaways: `== In het kort` (Dutch) or `== Summary` (English)
 
-6. **Draft starter content** — after the header, write at least the first section with a short orientation paragraph and one concrete example (code block if appropriate), in each target language. Leave a `// TODO` comment where further sections are expected so the author knows where to continue. When scaffolding both languages, keep the section structure and examples identical between them — only the prose differs.
+6. **Draft starter content** — before writing prose, read the voice reference for the target language (`voice/voice-nl.md` for `nl`, `voice/voice-en.md` for `en`) and match its traits. Then, after the header, write at least the first section with a short orientation paragraph and one concrete example (code block if appropriate), in each target language. Leave a `// TODO` comment where further sections are expected so the author knows where to continue. When scaffolding both languages, keep the section structure and examples identical between them — only the prose differs.
 
 7. **Update COURSE.md** — add a row for the new chapter in the correct position (once, not per language). Set the status column(s) for the language(s) just scaffolded to `in progress`; leave the other language's status as `planned` if it wasn't scaffolded. Use the same column format as existing rows:
    `| <#> | <folder> | <Module title> | <filename> | <Chapter title> | <Status (NL)> | <Status (EN)> |`
