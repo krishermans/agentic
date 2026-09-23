@@ -79,7 +79,7 @@ Chapter content language depends on the language root the file lives in:
 - files under `Course/nl/...` MUST be written in Dutch, using the `je` form consistently
 - files under `Course/en/...` MUST be written in English, addressing the reader directly ("you")
 
-Before drafting or rewriting prose in a chapter, read the voice reference for that language root — `voice/voice-nl.md` for `nl`, `voice/voice-en.md` for `en` — and match its sentence rhythm and narrative traits (bullet preview before the intro, "we"/direct-address alternation, forward-looking close). For `en`, the reference has no Dutch source to quote from and explicitly requires writing natively in English rather than translating — follow that rule strictly.
+Before drafting or rewriting prose in a chapter, read the voice reference for that language root — `voice-nl.md` for `nl`, `voice-en.md` for `en` — and match its sentence rhythm and narrative traits (bullet preview before the intro, "we"/direct-address alternation, forward-looking close). Both files ship inside the `new-chapter` and `translate-chapter` skill folders (installed alongside this instructions file); if you're editing prose by hand outside those skills, look for `voice-nl.md`/`voice-en.md` under `skills/new-chapter/` or `skills/translate-chapter/` in this package. For `en`, the reference has no Dutch source to quote from and explicitly requires writing natively in English rather than translating — follow that rule strictly.
 
 Both language versions of a chapter MUST:
 

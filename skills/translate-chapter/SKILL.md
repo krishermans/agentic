@@ -24,8 +24,9 @@ Determine the source language from the file's path (`Course/nl/...` or `Course/e
    - If it already exists, this is a **resync** — diff the two files section by section (by `==`/`===` heading structure, not prose). Report which sections are missing, extra, or reordered in the target, and ask the user to confirm before overwriting existing translated prose. Never silently discard existing translated content — only fill gaps or fix structural drift unless the user explicitly asks for a full re-translation.
 
 4. **Produce the target content**:
+   - Before drafting any prose, read the voice reference for the target language (`voice-nl.md` for `nl`, `voice-en.md` for `en`, both in this skill's own folder) and match its traits — this is what keeps a translation from reading like a mechanical translation.
    - Header: use the language-appropriate template from the `new-chapter` skill (`:toc-title:` and the program-name line change; keep the same `<Course Title>` and `<Module Name>`/`<Chapter Title>` translated appropriately)
-   - Opening sentence: translate `In dit hoofdstuk leer je ...` ↔ `In this chapter, you will learn ...`, keeping the same concrete claim about what the reader learns
+   - Opening bullet list: translate `In dit hoofdstuk leer je:` ↔ `In this chapter, you will learn:`, keeping the same concrete bullets about what the reader learns (no separate orientation sentence after the list — see the voice reference)
    - Body prose: written independently and naturally in the target language — not a literal word-for-word translation — but covering the **same sections, same examples, and same claims** in the **same order**
    - Code blocks: copy unchanged. Code identifiers and code comments are always English in both language versions, regardless of translation direction
    - Admonitions (`[TIP]`, `[WARNING]`): translate the text, keep the block structure
